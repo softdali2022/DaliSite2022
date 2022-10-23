@@ -1017,4 +1017,8 @@ ul.social_icon li a:hover {
   color: white;
 }
 
+.ml3 {
+  font-weight: 900;
+  font-size: 3.5em;
+}
 /** end footer **/
