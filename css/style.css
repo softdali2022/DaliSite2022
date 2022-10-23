@@ -1114,6 +1114,7 @@ ul.social_icon li a:hover {
 .zoom :hover img {
 	-webkit-transform: scale(1.3);
 	transform: scale(1.3);
+	border-radius: 50%;  /* on arrondit l'image */
 }
 .morph img {
   width: 200px;
