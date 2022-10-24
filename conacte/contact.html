@@ -1,40 +1,111 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Contact</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contact Form</title>
 </head>
-
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	.container{
+		background-image: url('contact-bg.jpg');
+		height: 100vh;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.card{
+		padding: 2rem;
+		text-align: center;
+		background-color: #39459b;
+		height: 600px;
+		width: 700px;
+		box-shadow: 0 0 10px 0 rgba(0,0,0,0.6);
+		border: 1rem solid #0d99d7;
+	}
+	.card h1{
+		font-size: 4rem;
+		color: #fff;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+	}
+	.card p{
+		color: #fff;
+		font-size: 1.2rem;
+		margin-top: 1rem;
+		letter-spacing: 2px;
+	}
+	.input-field{
+		margin: 2.5rem;
+		position: relative;
+	}
+	.card input{
+		width: 100%;
+		background-color: transparent;
+		padding: 1rem;
+		border: none;
+		outline: none;
+		border-bottom: 2px solid #0d99d7;
+		color: #fff;
+		font-size: 1rem;
+	}
+	label{
+		text-transform: capitalize;
+		letter-spacing: 2px;
+		position: absolute;
+		top: 10px;
+		left: 0;
+		color: #93d1ec;
+		transition: all 0.3s ease-in-out;
+	}
+	.input-field:last-child .submit{
+		width: 200px;
+		border: 2px solid #fff;
+		color: #fff;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
+	input:focus{
+		border-bottom: 2px solid #fff;
+	}
+	input:focus~label,
+	input:valid~label{
+		transform: translateY(-20px);
+	}
+</style>
 <body>
-  <main>
-            <div class="title">Contact us</div>
-            <div class="title-info">We'll get back to you soon!</div>
-
-            <form action="" method="" class="form">
-                <div class="input-group">
-                    <input type="text" name="first_name" id="first-name" placeholder="First name">
-                    <label for="first-name">First name</label>
-                </div>
-                
-                <div class="input-group">
-                    <input type="text" name="last_name" id="last-name" placeholder="Last Name">
-                    <label for="last-name">Last name</label>
-                </div>
-
-                <div class="input-group">
-                    <input type="email" name="e-mail" id="e-mail" placeholder="e-mail">
-                    <label for="e-mail">e-mail</label>
-                </div>
-
-                <div class="textarea-group">
-                    <textarea name="message" id="message" rows="5" placeholder="Message"></textarea>
-                    <label for="message">Message</label>
-                </div>
-
-                <div class="button-div">
-                    <button type="submit">Send</button>
-                </div>
-            </form>
-        </main>
+	<div class="container">
+		<div class="card">
+			<div class="card-body">
+				<form action="">
+					<h1>contact us</h1>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae tenetur vitae .</p>
+					<div class="input-field">
+						<input type="text" required="">
+						<label for="">Your name</label>
+					</div>
+					<div class="input-field">
+						<input type="text" required="">
+						<label for="">Your mail</label>
+					</div>
+					<div class="input-field">
+						<input type="text" required="">
+						<label for="">Your message</label>
+					</div>
+					<div class="input-field">
+						<input type="submit" class="submit" value="submit" required="">
+						
+					</div>
+					
+				</form>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
