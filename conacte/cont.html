@@ -5,15 +5,64 @@
     <title>Comment mettre du code PHP dans une page HTML ?</title>
 </head>
 <body>
-<script type="text/javascript">
-function afficher() {
-   
-   <?php echo "salutation" ?> 
-    
-}
+<script language="Javascript" type="text/javascript">
+    function sendMail() {
+        <!--Tester les donnees-->
+        if (document.getElementById("nom").value.length==0) {
+            alert("Saisir Votre Nom !!!");
+            return;
+        }
+		if (document.getElementById("prenom").value.length==0) {
+            alert("Saisir Votre Prenom !!!");
+            return;
+        }
+		if (document.getElementById("courriel").value.length==0) {
+            alert("Saisir Votre Mail !!!");
+            return;
+        }
+		if (document.getElementById("edSubject").value.length==0) {
+            alert("Saisir le Sujet de Votre Message !!!");
+            return;
+        }
+        if (document.getElementById("edBody").value.length==0) {
+            alert("Ecrire le message !!!");
+            return;
+        }
+        <!--Encoder l'url mailto-->
+        return true;
+    }
+ 
 </script>
-<form>
-    <input type="submit" name="envoyer" value="envoyer" onclick="afficher();">
+<form method="" action="javascript:sendMail()" method="post">
+    <table border="0" cellspacing="1">
+        <tr>
+            <td width="150"><p>Nom / Raison Social :<span style="color:red">*</span></p></td>
+            <td width="395">
+                <input type="text" id="nom" size="59" style="background-color: #A9E2F3; color: rgb(255,255,255);font-weight: bold;"></td>
+        </tr>
+		<tr>
+            <td width="150"><p>Courriel :<span style="color:red">*</span></p></td>
+            <td width="395">
+                <input type="text" id="courriel" size="59" style="background-color: #A9E2F3; color: rgb(255,255,255);font-weight: bold;"></td>
+        </tr>
+		<tr>
+            <td width="150"><p>Télephone : </p></td>
+            <td width="395">
+                <input type="text" id="telephone" size="59" style="background-color: #A9E2F3; color: rgb(255,255,255);font-weight: bold;"></td>
+        </tr>
+        <tr>
+            <td width="150"><p>Sujet :<span style="color:red">*</p></td>
+            <td width="395">
+                <input type="text" id="edSubject" size="59" style="background-color: #A9E2F3; color: rgb(255,255,255);font-weight: bold;"></td>
+        </tr>
+        <tr>
+            <td width="150"><p>Message :<span style="color:red">*</p></td>
+            <td width="395">
+                <textarea rows="20" id="edBody" cols="55" style="background-color: #A9E2F3; color: rgb(255,255,255);font-weight: bold;overflow: hidden;"></textarea></td>
+        </tr>
+    </table>
+    <br>
+    <input type="submit" value="Envoyer" >
 </form>
 </body>
 </html>
