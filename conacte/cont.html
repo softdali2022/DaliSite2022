@@ -4,8 +4,57 @@ if(!empty($_POST['envoyer'])) {
     echo "Bonjour !";
     // ou echo afficher();
 }
-?>
+
+<!DOCTYPE html>
+<html>
  
-<form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
-    <input type="submit" id="envoyer" name="envoyer" value="envoyer">
-<form>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+        <title> Formulaire de Contact </title>
+    </head>
+ 
+    <body>
+ 
+    <div id="cadreformulaire">
+        <form action="traitement.php" method="post">
+ 
+        <h2 id="titres"> Contact </h2>
+ 
+          <div>
+                <label for="prenom">Prenom</label>
+                <input type="text" id="exemple" name="user_name"/>
+            </div>
+ 
+            <div>
+                <label for="nom">Nom</label>
+                <input type="text" id="exemple" name="user_name"/>
+            </div>
+ 
+            <div>
+                <label for="email">Adresse E-Mail</label>
+                <input type="email" id="exemple" name="user_email"/>
+             </div>
+ 
+             <div>
+                <label for="message">
+              <h2 id="titres">Message</h2>
+            </label>
+                <textarea id="exemple" name="user_message"></textarea>
+            </div>
+ 
+        <div>
+            <label for="piecejointe">Ajouter une pièce jointe</label>
+            <input type="file" id="piecejointe" name="user_message"/>
+        </div>
+     
+             <div class="button">
+                <button type="submit" href="">Envoyer</button>
+             </div>
+ 
+        </form>
+    </div>
+ 
+    </body>
+ 
+</html>
