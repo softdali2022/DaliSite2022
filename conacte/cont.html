@@ -13,7 +13,11 @@ echo "bonjour!";
 <div>Bonjour, trois plus quatre est égal à <?php echo (3 + 4);?>.</div>
   <input type"submit" class="submit" name="envoyer" value="envoyer" onclick="afficher();">
    <div class="input-field">
-						<input type="submit" class="submit" value="submit" required="" onclick="afficher();">
+						<input type="submit" class="submit" value="submit" required="" onclick="<?
+function afficher(){
+echo "bonjour!";
+}
+?>">
 						
      </div>
 </body>
