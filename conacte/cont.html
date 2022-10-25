@@ -1,8 +1,3 @@
-<?
-function afficher(){
-echo "bonjour!";
-}
-?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -10,16 +5,14 @@ echo "bonjour!";
     <title>Comment mettre du code PHP dans une page HTML ?</title>
 </head>
 <body>
-<div>Bonjour, trois plus quatre est égal à <?php echo (3 + 4);?>.</div>
-  <input type"submit" class="submit" name="envoyer" value="envoyer" onclick="afficher();">
-   <div class="input-field">
-						<input type="submit" class="submit" value="submit" required="" onclick="<?
-{
-echo "bonjour!";
+<script type="text/javascript">
+function afficher() {
+    alert("PLOP");
 }
-?>">
-						
-     </div>
+</script>
+<form>
+    <input type="submit" name="envoyer" value="envoyer" onclick="afficher();">
+</form>
 </body>
 </html>
 
